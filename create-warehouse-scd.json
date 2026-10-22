@@ -1,0 +1,20 @@
+{
+  "warehouse-name": "scd",
+  "project-id": "00000000-0000-0000-0000-000000000000",
+  "storage-profile": {
+    "type": "s3",
+    "bucket": "scd",
+    "key-prefix": "",
+    "endpoint": "http://host.docker.internal:9000",
+    "region": "us-east-1",
+    "path-style-access": true,
+    "flavor": "s3-compat",
+    "sts-enabled": false
+  },
+  "storage-credential": {
+    "type": "s3",
+    "credential-type": "access-key",
+    "access-key-id": "minioadmin",
+    "secret-access-key": "minioadmin"
+  }
+}

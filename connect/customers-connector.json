@@ -1,0 +1,22 @@
+{
+  "name": "customers-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+    "database.hostname": "host.docker.internal",
+    "database.port": "5433",
+    "database.user": "postgres",
+    "database.password": "postgres",
+    "database.dbname": "shop",
+    "topic.prefix": "cdc",
+    "plugin.name": "pgoutput",
+    "publication.autocreate.mode": "filtered",
+    "table.include.list": "public.customers",
+    "slot.name": "debezium_customers",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "value.converter.schemas.enable": "false",
+    "snapshot.mode": "initial"
+  }
+}
